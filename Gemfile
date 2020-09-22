@@ -33,15 +33,16 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   # Custom gems
-
-  gem 'rspec-rails'
   gem 'guard'
+  gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'guard-minitest'
   gem 'simplecov'
   gem "factory_bot_rails"
   gem 'rails-controller-testing'
   gem 'faker'
+  gem 'database_cleaner'
 end
 
 group :development do
