@@ -41,7 +41,6 @@ group :development, :test do
   gem 'simplecov'
   gem "factory_bot_rails"
   gem 'rails-controller-testing'
-  gem 'faker'
   gem 'database_cleaner'
 end
 
@@ -67,3 +66,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom gems
 gem 'friendly_id'
+gem 'faker'
