@@ -39,9 +39,7 @@ group :development, :test do
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'guard-minitest'
   gem 'simplecov'
-  gem "factory_bot_rails"
   gem 'rails-controller-testing'
-  gem 'database_cleaner'
 end
 
 group :development do
