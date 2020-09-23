@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :pets, only: [:index, :create, :edit, :update, :show]
   end
 
-  get '*path', to: 'api/pets#omdex', via: :all
+  get '*path', to: 'api/pets#index', via: :all
 end
