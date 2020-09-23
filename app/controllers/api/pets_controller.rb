@@ -1,5 +1,7 @@
 class Api::PetsController < ApplicationController
   def index
+    @pets = Pet.all
+    render formats: [:json]
   end
 
   def create
