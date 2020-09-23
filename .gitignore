@@ -67,9 +67,6 @@ zeus.json
 # ignore .env file
 .env
 
-# ignore tests (use spec instead)
-/test
-
 # rspec settings
 .rspec
 
