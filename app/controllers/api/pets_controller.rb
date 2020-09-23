@@ -1,6 +1,6 @@
 class Api::PetsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :set_pet, only: [:show, :edit, :update]
+  before_action :set_pet, only: [:show, :update]
 
   def index
     @pets = Pet.all
@@ -16,10 +16,12 @@ class Api::PetsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
+    if @pet.update(pet_params)
+      render action: :show, formats: [:json]
+    else
+      render json: { errors: @pet.errors.full_messages }, status: 422
+    end
   end
 
   def show
