@@ -24,4 +24,16 @@ class Api::PetsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_not_nil assigns(:pet)
   end
+
+  test "create pet with success" do
+    post api_pets_path, params: { name: 'Nina', date_of_birth: '2001-01-01', pet_type: 'cat' }
+    assert_response :success
+    assert_not_nil assigns(:pet)
+  end
+
+  test "create pet with error" do
+    post api_pets_path
+    assert_response 422
+    assert_not_nil assigns(:pet)
+  end
 end
