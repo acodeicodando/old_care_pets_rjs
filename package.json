@@ -2,14 +2,29 @@
   "name": "care_pets_rjs",
   "private": true,
   "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.10.4",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
-    "turbolinks": "^5.2.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/preset-react": "^7.10.4",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "pragma": "dom",
+        "pragmaFrag": "DomFrag",
+        "throwIfNamespace": false,
+        "runtime": "classic"
+      }
+    ]
+  ]
 }
